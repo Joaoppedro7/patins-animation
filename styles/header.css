@@ -3,7 +3,6 @@ header {
   width: 100%;
   padding: 1.25rem 2rem;
   margin-inline: auto;
-
   & nav {
     display: flex;
     align-items: center;
@@ -43,3 +42,4 @@ header {
     }
   }
 }
+
