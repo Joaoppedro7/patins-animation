@@ -1,13 +1,13 @@
 .hero {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column-reverse;
   overflow: hidden;
 
-  max-width: 80rem;
+  max-width: 22.5rem;
   width: 100%;
-  padding: 2.5rem 2rem;
+  padding: 1rem 1.5rem 3rem;
   margin-inline: auto;
+
   & h1 {
     max-width: 40rem;
   }
@@ -41,7 +41,8 @@
 
   & .buttons {
     display: flex;
-    gap: 2rem;
+    flex-direction: column-reverse;
+    gap: 1.5rem;
     margin-top: 3rem;
     text-transform: uppercase;
 
@@ -78,8 +79,8 @@
   & > div:nth-child(2) {
     display: block;
     width: 100%;
-    max-width: 30.5rem;
-    height: 30.5rem;
+    max-width: 19.5rem;
+    height: 19.5rem;
 
     & .content {
       width: 100%;
@@ -206,5 +207,28 @@
 
   100% {
     transform: translateY(-15rem);
+  }
+}
+
+@media (width>=80em) {
+  .hero {
+    display: flex;
+    padding: 2.5rem 2rem;
+    max-width: 80rem;
+
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    & > div:nth-child(2) {
+      max-width: 30.5rem;
+      height: 30.5rem;
+    }
+
+    & .buttons {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+    }
   }
 }

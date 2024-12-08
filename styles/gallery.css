@@ -1,7 +1,7 @@
 section.gallery {
   width: 100%;
-  max-width: 80rem;
-  padding: 2.5rem 2rem;
+  max-width: 22.5rem;
+  padding: 1.5rem;
   margin-inline: auto;
 
   & header {
@@ -19,10 +19,13 @@ section.gallery {
   & .content {
     margin-top: 2rem;
     display: grid;
+
     grid-template-areas:
-      "A B B"
-      "C C D";
-    gap: 2.5rem;
+      "A"
+      "B"
+      "C"
+      "D";
+    gap: 1.25rem;
 
     & figure {
       position: relative;
@@ -99,5 +102,21 @@ section.gallery {
   from {
     opacity: 0;
     transform: translateY(100%);
+  }
+}
+@media (width>=80em) {
+  section.gallery {
+    width: 100%;
+    max-width: 80rem;
+    padding: 2.5rem 2rem;
+
+    & .content {
+      margin-top: 2rem;
+      display: grid;
+      grid-template-areas:
+        "A B B"
+        "C C D";
+      gap: 2rem;
+    }
   }
 }

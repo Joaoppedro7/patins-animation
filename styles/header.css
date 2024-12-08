@@ -1,8 +1,9 @@
 header {
-  max-width: 80rem;
+  max-width: 22.5rem;
   width: 100%;
-  padding: 1.25rem 2rem;
+  padding: 1.25rem 1.5rem;
   margin-inline: auto;
+  
   & nav {
     display: flex;
     align-items: center;
@@ -43,3 +44,9 @@ header {
   }
 }
 
+@media (width>=80em) {
+  header {
+    max-width: 80rem;
+    padding: 1.25rem 2rem;
+  }
+}
